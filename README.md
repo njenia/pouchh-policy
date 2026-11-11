@@ -6,7 +6,7 @@ Public **Privacy Policy** and **Terms of Use** for the Pouchh app (Google Play /
 
 After GitHub Pages is enabled on the `main` branch (root):
 
-- Home: https://njenia.github.io/pouchh-policy/
+- Home (product + legal): https://njenia.github.io/pouchh-policy/
 - Privacy Policy: https://njenia.github.io/pouchh-policy/privacy.html
 - Terms of Use: https://njenia.github.io/pouchh-policy/terms.html
 

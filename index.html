@@ -3,28 +3,89 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pouchh Legal</title>
+  <title>Pouchh — Family money, made playful</title>
+  <meta name="description" content="Pouchh is the kid-friendly mom & dad bank for allowance, gifts, savings goals, and spending — built for families." />
+  <link rel="icon" href="assets/icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="home">
   <header class="site-header">
-    <a class="brand" href="index.html">Pouchh</a>
+    <a class="brand" href="index.html" aria-label="Pouchh home">
+      <img src="assets/wordmark.png" alt="pouchh" class="brand-mark" width="120" height="36" />
+    </a>
     <nav>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Use</a>
+      <a href="#features">Features</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
     </nav>
   </header>
 
-  <main class="hero">
-    <p class="eyebrow">Pouchh</p>
-    <h1>Legal</h1>
-    <p class="lede">
-      Public privacy and terms documents for the Pouchh family money app.
-    </p>
-    <div class="cta-row">
-      <a class="btn" href="privacy.html">Privacy Policy</a>
-      <a class="btn btn-secondary" href="terms.html">Terms of Use</a>
-    </div>
+  <main>
+    <section class="hero-stage">
+      <div class="hero-copy reveal">
+        <img
+          class="hero-wordmark"
+          src="assets/wordmark.png"
+          alt="Pouchh"
+          width="220"
+          height="66"
+        />
+        <h1>The family bank kids actually like.</h1>
+        <p class="lede">
+          Track allowance, gifts, and spending together — with Dream Pouches and Patience Jars that make saving feel exciting.
+        </p>
+        <div class="cta-row">
+          <a class="btn" href="privacy.html">Privacy Policy</a>
+          <a class="btn btn-secondary" href="terms.html">Terms of Use</a>
+        </div>
+      </div>
+      <div class="hero-art reveal reveal-delay" aria-hidden="true">
+        <div class="hero-glow"></div>
+        <img class="mascot float" src="assets/mascot.png" alt="" width="420" height="420" />
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="section-intro reveal">
+        <p class="eyebrow">Built for families</p>
+        <h2>Mom &amp; dad bank energy, without the spreadsheet.</h2>
+        <p class="lede">
+          Parents run the household money story. Kids see their balance, log spending, and cheer when gifts land.
+        </p>
+      </div>
+
+      <div class="feature-rail">
+        <article class="feature reveal">
+          <img src="assets/mascot.png" alt="" width="120" height="120" />
+          <h3>Allowance &amp; gifts</h3>
+          <p>Schedule weekly or monthly allowance, send one-time gifts, and keep a clear family ledger.</p>
+        </article>
+        <article class="feature reveal reveal-delay">
+          <img src="assets/dream-pouch.png" alt="" width="120" height="120" />
+          <h3>Dream Pouches</h3>
+          <p>Kids save toward something they want — with goals, progress, and a little boost of interest along the way.</p>
+        </article>
+        <article class="feature reveal reveal-delay-2">
+          <img src="assets/patience-jar.png" alt="" width="120" height="120" />
+          <h3>Patience Jars</h3>
+          <p>Lock savings for a while, earn a reward for waiting, then open the jar when the time is right.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="legal-band reveal">
+      <div class="legal-band-inner">
+        <h2>Looking for the legal pages?</h2>
+        <p>Public documents for the Google Play listing and anyone using Pouchh.</p>
+        <div class="cta-row">
+          <a class="btn" href="privacy.html">Privacy Policy</a>
+          <a class="btn btn-secondary" href="terms.html">Terms of Use</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
