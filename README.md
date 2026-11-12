@@ -1,15 +1,13 @@
-# Pouchh policy site
+﻿# Pouchh website
 
-Public **Privacy Policy** and **Terms of Use** for the Pouchh app (Google Play / App Store listings).
+Marketing site + Privacy Policy + Terms of Use for the Pouchh family money app.
 
-## Live pages
+## Live URLs
 
-After GitHub Pages is enabled on the `main` branch (root):
-
-- Home (product + legal): https://njenia.github.io/pouchh-policy/
-- Privacy Policy: https://njenia.github.io/pouchh-policy/privacy.html
-- Terms of Use: https://njenia.github.io/pouchh-policy/terms.html
+- Home: https://pouchh.app/
+- Privacy Policy: https://pouchh.app/privacy.html
+- Terms of Use: https://pouchh.app/terms.html
 
 ## Contact
 
-jenian@gmail.com
+hello@pouchh.app
