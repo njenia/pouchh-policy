@@ -24,7 +24,7 @@
   <main class="doc">
     <p class="eyebrow">Legal</p>
     <h1>Privacy Policy</h1>
-    <p class="meta">Effective date: November 11, 2026 · Last updated: November 11, 2026</p>
+    <p class="meta">Effective date: November 14, 2026 · Last updated: November 14, 2026</p>
 
     <p>
       This Privacy Policy explains how <strong>Pouchh</strong> (“Pouchh,” “we,” “us,” or “our”)
@@ -62,6 +62,7 @@
       <li>Optional avatar images or preset avatar choices, and avatar colors.</li>
       <li>Family name and preferred currency.</li>
       <li>Family invite codes and related invite metadata.</li>
+      <li>For child profiles: the timestamp when a parent confirmed consent to create the profile.</li>
     </ul>
 
     <h3>3.2 Family money activity</h3>
@@ -113,12 +114,41 @@
       <li>Comply with legal obligations.</li>
     </ul>
 
-    <h2>5. Children’s privacy (including COPPA)</h2>
+    <h2>5. Legal bases (including GDPR)</h2>
+    <p>
+      Where the EU/UK GDPR or similar laws apply, we process personal data under these bases:
+    </p>
+    <ul>
+      <li>
+        <strong>Contract / steps prior to contract</strong> — to create your account and provide the Service
+        you request (Art. 6(1)(b)).
+      </li>
+      <li>
+        <strong>Legitimate interests</strong> — to secure the Service, prevent abuse, improve reliability,
+        and send service-related notices, balanced against your rights (Art. 6(1)(f)).
+      </li>
+      <li>
+        <strong>Consent</strong> — for optional features such as push notifications or camera/photo access,
+        and for parental authorization to create and operate a child’s account (Art. 6(1)(a); for children,
+        Art. 8 where applicable). You may withdraw consent by deleting the child account, disabling the
+        optional feature, or emailing us.
+      </li>
+      <li>
+        <strong>Legal obligation</strong> — when we must retain or disclose limited information to comply
+        with law (Art. 6(1)(c)).
+      </li>
+    </ul>
+
+    <h2>6. Children’s privacy (including COPPA)</h2>
     <p>
       Pouchh is intended for use by parents/guardians together with their children. A parent or guardian must
-      create the family account and create any child profiles. By creating a child account, the parent/guardian
-      consents to the collection and use of that child’s information as described in this Policy for the purpose
-      of providing the Service within the family.
+      create the family account and create any child profiles.
+    </p>
+    <p>
+      Before a child account is created, we provide an in-app children’s privacy notice and require the parent’s
+      affirmative consent. We then send a confirmatory email to the parent’s account email describing what we
+      collect and how to revoke consent (email-plus style verification for internal use of children’s information).
+      We record the consent timestamp on the child profile.
     </p>
     <p>Children’s information is limited to what is needed for the family money experience, such as:</p>
     <ul>
@@ -130,9 +160,11 @@
       Parents can review, correct, or delete a child’s information by using in-app controls (including deleting a child account)
       or by contacting us at <a href="mailto:hello@pouchh.app">hello@pouchh.app</a>.
       We do not require a child to provide more personal information than is reasonably necessary to participate in the Service.
+      We do not share children’s personal information with third parties for their own marketing purposes.
+      Sharing with processors listed below is only to support the internal operations of the Service.
     </p>
 
-    <h2>6. How we share information</h2>
+    <h2>7. How we share information</h2>
     <p>We share information only as needed to operate the Service:</p>
     <ul>
       <li>
@@ -140,10 +172,11 @@
         profile and money activity according to the app’s role permissions.
       </li>
       <li>
-        <strong>Service providers.</strong> We use trusted processors to host and operate the Service, including:
+        <strong>Service providers (processors).</strong> We use trusted processors to host and operate the Service, including:
         <ul>
           <li><strong>Supabase</strong> — authentication, database, file storage (for avatars), and related backend services.</li>
           <li><strong>Expo / EAS</strong> — app distribution infrastructure and push notification delivery.</li>
+          <li><strong>Resend</strong> — transactional email delivery (account confirmation, password reset, parental consent confirmation, invites).</li>
           <li>Cloud and platform providers that support hosting, storage, and delivery of the Service.</li>
         </ul>
         These providers process data on our behalf under contractual and technical safeguards appropriate to their role.
@@ -157,59 +190,94 @@
         be transferred as part of that transaction, subject to this Policy or successor notice.
       </li>
     </ul>
-    <p>We do not share children’s personal information with third parties for their own marketing purposes.</p>
 
-    <h2>7. Data storage and security</h2>
+    <h2>8. Data storage and security</h2>
     <p>
       We use industry-standard measures designed to protect information, including encrypted transport (HTTPS),
       access controls, and row-level security rules in our database so family data is restricted to authorized users.
-      Session credentials may be stored securely on device. No method of transmission or storage is 100% secure,
-      and we cannot guarantee absolute security.
+      Session credentials may be stored securely on device. We maintain an internal written information security
+      program appropriate to our size and the sensitivity of children’s and family data, including periodic risk
+      review. No method of transmission or storage is 100% secure, and we cannot guarantee absolute security.
     </p>
 
-    <h2>8. Data retention</h2>
+    <h2>9. Data retention</h2>
     <p>
-      We retain account and family activity data for as long as your account remains active or as needed to provide
-      the Service. If you delete a child profile, related child data is removed or dissociated according to our
-      deletion workflows and cascading database rules. If you request deletion of a parent/family account, we will
-      delete or anonymize personal data associated with that account unless we must retain limited information for
-      legitimate business, security, or legal reasons (for example, fraud prevention or compliance).
+      We retain personal information only as long as needed for the purposes described in this Policy, then delete
+      or anonymize it. Our retention schedule:
     </p>
+    <ul>
+      <li>
+        <strong>Active family / parent accounts:</strong> retained while the account remains active so we can
+        provide the Service.
+      </li>
+      <li>
+        <strong>Child profiles:</strong> retained until a parent deletes the child in-app or requests deletion.
+        Deletion removes the child’s auth user, profile, avatars, and related ledger/savings/pouch data via cascading
+        database rules, typically completing within <strong>30 days</strong> (usually sooner).
+      </li>
+      <li>
+        <strong>Parent / family account deletion requests:</strong> after we verify the request, we delete or
+        anonymize personal data associated with the account within <strong>30 days</strong>, unless we must retain
+        limited information longer for security, fraud prevention, dispute resolution, or legal compliance
+        (for example, up to <strong>12 months</strong> for security logs when reasonably necessary).
+      </li>
+      <li>
+        <strong>Transactional emails and invites:</strong> invite codes expire per their stated expiry; email
+        delivery metadata may be retained by our email processor according to its retention practices for
+        deliverability and abuse prevention.
+      </li>
+      <li>
+        <strong>Backups:</strong> deleted data may remain in encrypted backups for a limited period (generally
+        up to <strong>35 days</strong>) until those backups rotate out.
+      </li>
+    </ul>
 
-    <h2>9. Your choices and rights</h2>
+    <h2>10. Your choices and rights</h2>
     <ul>
       <li>Update profile details and avatars in the app.</li>
       <li>Enable or disable notifications in device settings.</li>
       <li>Delete a child account using parent controls in the app.</li>
-      <li>Request access, correction, or deletion of personal information by emailing
+      <li>Request access, correction, deletion, or (where applicable) portability of personal information by emailing
         <a href="mailto:hello@pouchh.app">hello@pouchh.app</a>.</li>
+      <li>Withdraw parental consent by deleting the child account or contacting us.</li>
     </ul>
     <p>
-      Depending on where you live, you may have additional rights under applicable privacy laws.
-      We will respond to verified requests within a reasonable period.
+      Depending on where you live, you may have additional rights under applicable privacy laws (including GDPR),
+      such as the right to object to certain processing, restrict processing, or lodge a complaint with a
+      supervisory Data Protection Authority in your country of residence. We will respond to verified requests
+      within a reasonable period (and within the time required by applicable law).
     </p>
 
-    <h2>10. International users</h2>
+    <h2>11. International transfers</h2>
     <p>
       The Service may be hosted and processed in countries other than where you live, including through our
-      service providers. By using the Service, you understand that your information may be transferred to and
-      processed in those locations.
+      service providers (for example, infrastructure that may be located in the United States or other regions).
+      Where required by GDPR or similar laws, we rely on appropriate safeguards for such transfers, such as
+      Standard Contractual Clauses or the provider’s comparable transfer mechanism, together with technical
+      measures like encryption in transit. Contact us for more information about these safeguards.
     </p>
 
-    <h2>11. Third-party links and services</h2>
+    <h2>12. Security incidents</h2>
+    <p>
+      If a personal data breach occurs that is likely to result in a risk to individuals’ rights and freedoms,
+      we will notify the relevant supervisory authority without undue delay and, where required, within
+      72 hours of becoming aware of the breach, and we will inform affected users when the law requires it.
+    </p>
+
+    <h2>13. Third-party links and services</h2>
     <p>
       The Service may contain links to third-party sites or rely on platform services (such as Google Play).
       Their privacy practices are governed by their own policies, not this one.
     </p>
 
-    <h2>12. Changes to this Policy</h2>
+    <h2>14. Changes to this Policy</h2>
     <p>
       We may update this Privacy Policy from time to time. We will post the updated version on this page and
       revise the “Last updated” date. Continued use of the Service after an update means you accept the revised Policy.
       If changes are material, we will take reasonable steps to provide additional notice.
     </p>
 
-    <h2>13. Contact</h2>
+    <h2>15. Contact</h2>
     <p>
       Privacy questions or requests:<br />
       Email: <a href="mailto:hello@pouchh.app">hello@pouchh.app</a><br />
@@ -218,7 +286,11 @@
   </main>
 
   <footer class="site-footer">
-    <p>© 2026 Pouchh. <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+    <p>
+      © 2026 Pouchh.
+      <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a>
+      · <a href="https://paypal.me/pouchh" rel="noopener noreferrer" target="_blank">Support Pouchh ❤️</a>
+    </p>
   </footer>
 </body>
 </html>
